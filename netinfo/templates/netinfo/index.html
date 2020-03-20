@@ -1,0 +1,10 @@
+<h1>Netinfo APP</h1>
+<p>Run command:</p>
+<form method="POST"> {% csrf_token %}
+{{ form }}
+<input type="submit" value="Run command!" />
+</form>
+{% if request.POST %}
+<p>Command output:</p>
+<pre>{{ output }}</pre>
+{% endif %}
